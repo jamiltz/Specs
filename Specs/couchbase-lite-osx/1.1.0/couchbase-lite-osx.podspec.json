@@ -26,10 +26,6 @@
     "CouchbaseLite.framework",
     "CouchbaseLiteListener.framework"
   ],
-  "public_header_files": [
-    "CouchbaseLite.framework/Headers/*.h",
-    "CouchbaseLiteListner.framework/Headers/*.h"
-  ],
   "frameworks": [
     "CFNetwork",
     "Security",
@@ -39,9 +35,8 @@
     "sqlite3",
     "z"
   ],
-  "requires_arc": true,
   "xcconfig": {
-    "OTHER_LDFLAGS": "-ObjC",
-    "FRAMEWORK_SEARCH_PATHS": "$\"(PODS_ROOT)/couchbase-lite-ios/**\""
-  }
+    "OTHER_LDFLAGS": "-ObjC"
+  },
+  "requires_arc": true
 }
