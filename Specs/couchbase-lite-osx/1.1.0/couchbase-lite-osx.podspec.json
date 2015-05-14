@@ -9,9 +9,6 @@
   "authors": {
     "Jens Alfke": "jens@couchbase.com"
   },
-  "platforms": {
-    "osx": "10.8"
-  },
   "source": {
     "http": "http://packages.couchbase.com/builds/mobile/ios/1.1.0/1.1.0-18/couchbase-lite-macosx-community_1.1.0-18.zip"
   },
@@ -19,10 +16,6 @@
     "CouchbaseLite.framework",
     "CouchbaseLiteListener.framework",
     "LICENSE.txt"
-  ],
-  "vendored_frameworks": [
-    "CouchbaseLite.framework",
-    "CouchbaseLiteListener.framework"
   ],
   "frameworks": [
     "CFNetwork",
@@ -33,9 +26,22 @@
     "sqlite3",
     "z"
   ],
-  "xcconfig": {
-    "OTHER_LDFLAGS": "-ObjC",
-    "LD_RUNPATH_SEARCH_PATHS": "@loader_path/../Frameworks"
+  "platforms": {
+    "osx": "10.8"
+  },
+  "osx": {
+    "vendored_frameworks": [
+      "CouchbaseLite.framework",
+      "CouchbaseLiteListener.framework"
+    ],
+    "resources": [
+      "CouchbaseLite.framework",
+      "CouchbaseLiteListener.framework"
+    ],
+    "xcconfig": {
+      "OTHER_LDFLAGS": "-ObjC",
+      "LD_RUNPATH_SEARCH_PATHS": "@loader_path/../Frameworks"
+    }
   },
   "requires_arc": true
 }
