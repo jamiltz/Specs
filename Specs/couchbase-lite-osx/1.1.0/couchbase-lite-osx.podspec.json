@@ -22,7 +22,11 @@
     "vendored_frameworks": [
       "CouchbaseLite.framework",
       "CouchbaseLiteListener.framework"
-    ]
+    ],
+    "xcconfig": {
+      "OTHER_LDFLAGS": "-ObjC",
+      "LD_RUNPATH_SEARCH_PATHS": "@loader_path/../Frameworks"
+    }
   },
   "platforms": {
     "osx": "10.8"
@@ -36,9 +40,5 @@
     "sqlite3",
     "z"
   ],
-  "xcconfig": {
-    "OTHER_LDFLAGS": "-ObjC",
-    "LD_RUNPATH_SEARCH_PATHS": "@loader_path/../Frameworks"
-  },
   "requires_arc": true
 }
