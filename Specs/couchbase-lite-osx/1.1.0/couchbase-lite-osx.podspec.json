@@ -5,8 +5,6 @@
     "type": "Apache License, Version 2.0",
     "file": "LICENSE.txt"
   },
-  "summary": "Couchbase Lite is an embedded lightweight, document-oriented (NoSQL), syncable database engine.",
-  "description": "**Couchbase Lite** is an embedded lightweight, document-oriented (NoSQL), syncable database engine.\\n\\n  Get more info and downloads of Couchbase Lite (for iOS and Android) via [the Couchbase mobile portal](http://mobile.couchbase.com)\\n\\n  [Click here for **official documentation for Couchbase Lite**](http://developer.couchbase.com)\\n\\n  Latency matters a lot to users, so a local database takes frustration out of the equation. It’s got JSON documents, and the same map/reduce as Couchbase Server, in a pint-sized edition.\\n\\n  Couchbase Lite compiles natively for iOS and Android. Half a megabyte optimized, for quick launch and snappy user experience on occasionally connected devices when data matters.",
   "homepage": "http://mobile.couchbase.com",
   "authors": {
     "Jens Alfke": "jens@couchbase.com"
@@ -36,7 +34,8 @@
     "z"
   ],
   "xcconfig": {
-    "OTHER_LDFLAGS": "-ObjC"
+    "OTHER_LDFLAGS": "-ObjC",
+    "LD_RUNPATH_SEARCH_PATHS": "@loader_path/../Frameworks"
   },
   "requires_arc": true
 }
