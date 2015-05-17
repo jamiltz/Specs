@@ -19,17 +19,10 @@
   },
   "preserve_paths": [
     "CouchbaseLite.framework",
-    "CouchbaseLiteListener.framework",
     "LICENSE.txt"
   ],
-  "vendored_frameworks": [
-    "CouchbaseLite.framework",
-    "CouchbaseLiteListener.framework"
-  ],
-  "public_header_files": [
-    "CouchbaseLite.framework/Headers/*.h",
-    "CouchbaseLiteListner.framework/Headers/*.h"
-  ],
+  "vendored_frameworks": "CouchbaseLite.framework",
+  "public_header_files": "CouchbaseLite.framework/Headers/*.h",
   "frameworks": [
     "CFNetwork",
     "Security",
@@ -43,5 +36,21 @@
   "xcconfig": {
     "OTHER_LDFLAGS": "-ObjC",
     "FRAMEWORK_SEARCH_PATHS": "$\"(PODS_ROOT)/couchbase-lite-ios/**\""
-  }
+  },
+  "default_subspecs": "Lite",
+  "subspecs": [
+    {
+      "name": "Lite"
+    },
+    {
+      "name": "Listener",
+      "vendored_frameworks": "CouchbaseLiteListener.framework",
+      "public_header_files": "CouchbaseLiteListener.framework/Headers/*.h",
+      "preserve_paths": [
+        "CouchbaseLiteListener.framework",
+        "CouchbaseLiteListener.framework",
+        "CouchbaseLiteListener.framework/Headers/*.h"
+      ]
+    }
+  ]
 }
